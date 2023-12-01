@@ -33,23 +33,25 @@ int _printf(const char *format, ...)
 				fwrite(1, format, 1);
 				printCh++;
 			}
-			else if(*format == 'c'){
+			else if(*format == 'c')
+			{
 			char c = va_arg(list_of_args, int); //Use va_arg for char
 			fwrite(1, &c, 1);
 			printCh++;
 			}
-			else if (*format == 's')
+			else if(*format == 's')
 			{
-			char *str = va_arg(list_of_arg, chars*);
+			char *str = va_arg(list_of_arg, char*);
 			int str_len = 0;
 
 			//calculate the length of the string
-			while (str[str_len] != '\0')
+			while(str[str_len] != '\0')
 				str_len++;
 
 			//write the string to the stdout
 			fwrite(1, str, str_len);
 			printCh += str_len;
+			}
 		}
 		
 		format++;
