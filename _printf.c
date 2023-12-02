@@ -15,27 +15,27 @@ int _printf(const char *format, ...)
 	
 	va_start(list_of_args, format);
 	
-	while(*format) //Loop that iterates through the characters of the format string.
+	while(*format) /*Loop that iterates through the characters of the format string.*/
 	{
-		if(*format != '%') //If format is not the % sign.
+		if(*format != '%') /*If format is not the % sign.*/
 		{
-			fwrite(1, format, 1); //Write the char to the stdout.
+			fwrite(1, format, 1); /*Write the char to the stdout.*/
 			printCh++;
 		}
-		else //If format is the % sign.
+		else /*If format is the % sign.*/
 		{
-			format++; //Skip '%' - Check the next character.
+			format++; /*Skip '%' - Check the next character.*/
 			if(*format == '\0')
 				break;
 
-			if(*format == '%') //This solves %
+			if(*format == '%') /*This solves %*/
 			{
 				fwrite(1, format, 1);
 				printCh++;
 			}
 			else if(*format == 'c')
 			{
-			char c = va_arg(list_of_args, int); //Use va_arg for char
+			char c = va_arg(list_of_args, int); /*Use va_arg for char*/
 			fwrite(1, &c, 1);
 			printCh++;
 			}
@@ -44,11 +44,11 @@ int _printf(const char *format, ...)
 			char *str = va_arg(list_of_arg, char*);
 			int str_len = 0;
 
-			//calculate the length of the string
+			/*calculate the length of the string*/
 			while(str[str_len] != '\0')
 				str_len++;
 
-			//write the string to the stdout
+			/*write the string to the stdout*/
 			fwrite(1, str, str_len);
 			printCh += str_len;
 			}
