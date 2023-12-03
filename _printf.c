@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 			else if(*format == 'c')
 			{
 			char c = va_arg(list_of_args, int); /*Use va_arg for char*/
-			fwrite(int, char??, 1);
+			fwrite(int, char, 1);
 			printCh++;
 			}
 			else if(*format == 's')
