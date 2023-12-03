@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	{
 		if(*format != '%') /*If format is not the % sign.*/
 		{
-			write(1, *format, 1); /*Write the char to the stdout.*/
+			fwrite(1, *format, 1); /*Write the char to the stdout.*/
 			printCh++;
 		}
 		else /*If format is the % sign.*/
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 
 			if(*format == '%') /*This solves %*/
 			{
-				fwrite(1, *format, 1);
+				fwrite(int, *format, 1);
 				printCh++;
 			}
 			else if(*format == 'c')
