@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	{
 		if(*format != '%') /*If format is not the % sign.*/
 		{
-			fwrite(1, format, 1); /*Write the char to the stdout.*/
+			fwrite(int, const void, 1); /*Write the char to the stdout.*/
 			printCh++;
 		}
 		else /*If format is the % sign.*/
@@ -30,13 +30,13 @@ int _printf(const char *format, ...)
 
 			if(*format == '%') /*This solves %%*/
 			{
-				fwrite(1, format, 1);
+				fwrite(int, const char, 1);
 				printCh++;
 			}
 			else if(*format == 'c')
 			{
 			char c = va_arg(list_of_args, int); /*Use va_arg for char*/
-			fwrite(1, &c, 1);
+			fwrite(int, char??, 1);
 			printCh++;
 			}
 			else if(*format == 's')
