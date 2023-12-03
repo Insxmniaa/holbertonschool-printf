@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 			}
 			else if(*format == 'c')
 			{
-			char cRR = va_arg(list_of_args, int); /*Use va_arg for char*/
+			char c = va_arg(list_of_args, int); /*Use va_arg for char*/
 			fwrite(1, &c, 1);
 			printCh++;
 			}
