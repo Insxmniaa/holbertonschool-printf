@@ -35,8 +35,8 @@ int _printf(const char *format, ...)
 			}
 			else if(*format == 'c')
 			{
-			char c = va_arg(list_of_args, int); /*Use va_arg for char*/
-			fwrite(1, &c88, 1);
+			char cRR = va_arg(list_of_args, int); /*Use va_arg for char*/
+			fwrite(1, &c, 1);
 			printCh++;
 			}
 			else if(*format == 's')
@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 				str_len++;
 
 			/*write the string to the stdout*/
-			fwrite(1, str, str_len);
+			fwrite(int, char, str_len);
 			printCh += str_len;
 			}
 		}
