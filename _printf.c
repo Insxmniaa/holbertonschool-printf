@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	int printCh = 0;
 	va_list list_of_args;
 	
-	if(*format == NULL)
+	if(*format = NULL)
 		return(-1);
 	
 	va_start(list_of_args, format);
@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	{
 		if(*format != '%') /*If format is not the % sign.*/
 		{
-			fwrite(1, format, 1); /*Write the char to the stdout.*/
+			fwrite(int, format, 1); /*Write the char to the stdout.*/
 			printCh++;
 		}
 		else /*If format is the % sign.*/
