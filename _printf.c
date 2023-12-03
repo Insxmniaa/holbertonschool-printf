@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	int printCh = 0;
 	va_list list_of_args;
 	
-	if(*format == NULL)
+	if(format == NULL)
 		return(-1);
 	
 	va_start(list_of_args, format);
@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	{
 		if(*format != '%') /*If format is not the % sign.*/
 		{
-			fwrite(1, format, 1); /*Write the char to the stdout.*/
+			write(1, *format, 1); /*Write the char to the stdout.*/
 			printCh++;
 		}
 		else /*If format is the % sign.*/
@@ -35,13 +35,13 @@ int _printf(const char *format, ...)
 			}
 			else if(*format == 'c')
 			{
-			char c = va_arg(list_of_arg, int); /*Use va_arg for char*/
-			fwrite(1, &c, 1);
+			char c = va_arg(list_of_args, int); /*Use va_arg for char*/
+			write(1, &c, 1);
 			printCh++;
 			}
 			else if(*format == 's')
 			{
-			char *str = va_arg(list_of_arg, char*);
+			char *str = va_arg(list_of_args, char*);
 			int str_len = 0;
 
 			/*calculate the length of the string*/
@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 				str_len++;
 
 			/*write the string to the stdout*/
-			fwrite(1, str, str_len);
+			write(1, str, str_len);
 			printCh += str_len;
 			}
 		}
