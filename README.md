@@ -22,6 +22,11 @@
 	
 - Use flowcharts to approach and/or understanding a workflow.
 
+4. **Printf**
+
+- Printf is a c function that will print any argument or value you place on the function. 
+- This project was made to be able to better understand how does printf in c works. Also helps us develop our skills as programmers learning how to create a function like printf in c. 
+
 ## Tasks
 
 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life.
