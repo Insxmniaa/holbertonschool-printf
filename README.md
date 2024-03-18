@@ -35,6 +35,8 @@
 
 			(flowchart here)
 
+---
+
 1. Education is when you read the fine print. Experience is what you get if you don't.
 
 - Handle the following conversion specifiers:
@@ -43,14 +45,18 @@
 
 			(flowchart here) 
 
+---
+
 2. Just because it's in print doesn't mean it's the gospel.
 
 - Create a man page for your function.
 
 			(flowchart here)
 
+---
+
 ## Authors
 
-	- ==Jeannelys Melendez==
-	- ==Christian Diaz==
+	- Jeannelys Melendez
+	- Christian Diaz
 
