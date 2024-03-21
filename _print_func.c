@@ -1,10 +1,10 @@
 #include "main.h"
  /**
- * print_char - prints character in main function
- * @args: variable that points to argument in main
- *
- * Return: 0 (success)
- */
+  * print_char - Prints character in main function.
+  * @args: variable that points to argument in main
+  *
+  * Return: 0 (success)
+  */
 int print_char(va_list args)
 {
 	_putchar(va_arg(args, int));
@@ -36,7 +36,7 @@ int print_string(va_list args)
 /**
  * print_perc - prints percent in main function
  * @args: variable that points to argument in main
- * 
+ *
  * Return: 0 (success)
  */
 
