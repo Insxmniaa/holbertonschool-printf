@@ -5,7 +5,7 @@
 #include <unistd.h>
 
 /**
- * struct coversion - allows us to declare variables.
+ * struct coversion - allow us to declare variables.
  * @string: a pointer to a character array.
  * @f: takes a variable argument list and returns an integer.
  */
