@@ -40,7 +40,7 @@ int _printf(const char* format, ...)
 			{
 				return (-1);
 			}
-			for (j = 0; j != NULL; j++)
+			for (j = 0; g[j].f != NULL; j++)
 			{
 				if (format[i] == g[j].string[0])
 				{
