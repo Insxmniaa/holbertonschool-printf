@@ -8,7 +8,7 @@
 int print_char(va_list args)
 {
 	_putchar(va_arg(args, int));
-	return 0;
+	return (1);
 }
 
 /**
@@ -30,7 +30,7 @@ int print_string(va_list args)
 		_putchar(ptr[i]);
 		count++;
 	}
-	return (count - 1);
+	return (count);
 }
 
 /**
@@ -43,5 +43,5 @@ int print_string(va_list args)
 int print_perc(__attribute__((unused))va_list args)
 {
 	_putchar('%');
-	return 0;
+	return (1);
 }

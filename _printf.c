@@ -15,7 +15,6 @@ int _printf(const char* format, ...)
 	int counter = 0;
 	int i = 0;
 	int j = 0;
-	int z = 0;
 
 	dt_t g[] = {
 		{"c", print_char},
@@ -32,7 +31,6 @@ int _printf(const char* format, ...)
 	}
 	while (format[i] != '\0')
 	{
-		counter++;
 		if (format[i] == '%')
 		{
 			i++;
@@ -44,7 +42,7 @@ int _printf(const char* format, ...)
 			{
 				if (format[i] == g[j].string[0])
 				{
-					z += g[j].f(args);
+					counter += g[j].f(args);
 					break;
 				}
 			}
@@ -59,9 +57,10 @@ int _printf(const char* format, ...)
 		else
 		{
 			_putchar(format[i]);
+			counter++;
 		}
 		i++;	
 	}
 	va_end(args);
-	return (counter + z);
+	return (counter);
 }
