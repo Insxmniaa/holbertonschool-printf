@@ -20,7 +20,7 @@ int print_char(va_list args)
 
 int print_string(va_list args)
 {
-	int i;
+	int i, count = 0;
 	char *ptr = va_arg(args, char *);
 
 	if (*ptr == '\0')
@@ -28,8 +28,9 @@ int print_string(va_list args)
 	for (i = 0; ptr[i] != '\0'; i++)
 	{
 		_putchar(ptr[i]);
+		count++;
 	}
-	return (i - 1);
+	return (count);
 }
 
 /**

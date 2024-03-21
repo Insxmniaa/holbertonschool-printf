@@ -21,21 +21,26 @@ int _printf(const char* format, ...)
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_perc},
+		{NULL, NULL},
 	};
 
 	va_start(args, format);
 
+	if (format == NULL)
+	{
+		return (-1);
+	}
 	while (format[i] != '\0')
 	{
 		counter++;
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i + 1] == '\0')
+			if (format[i] == '\0')
 			{
 				return (-1);
 			}
-			for (j = 0; j < 3; j++)
+			for (j = 0; j != NULL; j++)
 			{
 				if (format[i] == g[j].string[0])
 				{
