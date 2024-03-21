@@ -2,13 +2,11 @@
 /**
  * _printf - prints text and different types of data.
  * @format: variable that holds argument to be inserted.
- * 
  * Return: variable for length of the returned statement.
  */
-int _printf(const char* format, ...)
+int _printf(const char *format, ...)
 {
 	va_list args;
-
 	int counter = 0;
 	int i = 0;
 	int j = 0;
@@ -21,7 +19,6 @@ int _printf(const char* format, ...)
 	};
 
 	va_start(args, format);
-
 	if (format == NULL)
 	{
 		return (-1);
@@ -56,7 +53,7 @@ int _printf(const char* format, ...)
 			_putchar(format[i]);
 			counter++;
 		}
-		i++;	
+		i++;
 	}
 	va_end(args);
 	return (counter);
