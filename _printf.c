@@ -45,7 +45,15 @@ int _printf(const char* format, ...)
 				if (format[i] == g[j].string[0])
 				{
 					z += g[j].f(args);
+					break;
 				}
+			}
+			if (g[j].f == NULL)
+			{
+				_putchar(format[i - 1]);
+				counter++;
+				_putchar(format[i]);
+				counter++;
 			}
 		}
 		else
