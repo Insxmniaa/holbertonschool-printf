@@ -1,13 +1,10 @@
 #include "main.h"
-
 /**
- * _printf - prints text and different types of data
- * @format: variable that holds argument to be inserted
+ *_printf - prints text and different types of data.
+ *@format: variable that holds argument to be inserted.
  * 
- * Return: variable for length of the returned statement
- * 
+ *Return: variable for length of the returned statement.
  */
-
 int _printf(const char* format, ...)
 {
 	va_list args;
