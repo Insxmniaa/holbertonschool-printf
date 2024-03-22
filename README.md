@@ -57,7 +57,7 @@
 
 ## Flowchart
 
-![Flowchart]"C:\Users\jeann\Downloads\Blank diagram.png"
+[Flowchart](https://lucid.app/lucidchart/85b4fd7e-182a-44d8-b982-234e37f5d1b9/edit?viewport_loc=-1162%2C-659%2C4361%2C2337%2C0_0&invitationId=inv_d89795bf-9a13-4929-bdb9-a9b12d506f9b)
 
 ## Authors
 
