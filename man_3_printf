@@ -1,0 +1,45 @@
+.TH _PRINTF "03/21/2024" "1.0" "_printf Manual"
+
+.SH NAME
+_printf \- prints data to the standard output.
+
+.SH SYNOPSIS
+#include "main.h"
+.PP
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+The printf function is used to print formatted text to the standart output. In the program, the team has created their own version of the printf function. The program will scan each letter of the given formatted string. Every normal character will be printed to the stdout. When running into a "%" the program knows it's going to receive a special character.
+
+.SH EXAMPLE
+
+.RS
+
+.I INPUT
+.PP
+char *str[] = "This is a string\0";
+.PP
+printf("%s", str);
+.PP
+.I OUTPUT
+.PP
+This is a string
+
+.SH RETURN VALUE
+Upon successful return, the functions will return the number of characters printed except for the null byte at the end of the string. If invalid data is given then it will return an error.
+
+.SH Files
+.SS Files used to run program
+.PP
+_print_func.c
+.PP
+_printf.c
+.PP
+_putchar.c
+.PP
+main.h
+
+.SH AUTHORS
+Jeannelys Melendez
+.PP
+Christian Diaz 
