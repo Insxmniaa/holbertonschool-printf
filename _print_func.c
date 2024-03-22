@@ -55,14 +55,14 @@ int print_perc(__attribute__((unused))va_list args)
 
 int print_d(va_list args)
 {
-	int num;
+	int num, counter = 0;
 	unsigned int absolute, base;
 	unsigned int divi = 1;
 	num = va_arg(args, int);
 
 	if (num < 0)
 	{
-		divi = divi + _putchar('-');
+		counter = counter + _putchar('-');
 		absolute = num * -1;
 	}
 	else
@@ -77,8 +77,8 @@ int print_d(va_list args)
 	}
 	while (divi > 0)
 	{
-		divi = divi + _putchar(((absolute / divi) % 10) + '0');
+		counter = counter + _putchar(((absolute / divi) % 10) + '0');
 		divi = divi / 10;
 	}
-	return (divi);
+	return (counter);
 }
