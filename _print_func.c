@@ -45,3 +45,40 @@ int print_perc(__attribute__((unused))va_list args)
 	_putchar('%');
 	return (1);
 }
+
+/**
+ * print_d - function to print decimals in _pritnf
+ * @args: variable that points to the argument in main
+ *
+ * Return: returns divisor value to main
+ */
+
+int print_d(va_list args)
+{
+	int num;
+	unsigned int absolute, base;
+	unsigned int divi = 1;
+	num = va_arg(args, int);
+
+	if (num < 0)
+	{
+		divi = divi + _putchar('-');
+		absolute = num * -1;
+	}
+	else
+		absolute = num;
+
+	base = absolute;
+
+	while (base > 9)
+	{
+		base = base / 10;
+		divi = divi * 10;
+	}
+	while (divi > 0)
+	{
+		divi = divi + _putchar(((absolute / divi) % 10) + '0');
+		divi = divi / 10;
+	}
+	return (divi);
+}
